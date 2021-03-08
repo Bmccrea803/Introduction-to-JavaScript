@@ -1,52 +1,56 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
-
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
-
 /*
 When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.
 This will usually entail console logging the answer directly or console logging the invocation (call) of the function so when it
 returns a value, that value will be logged to the console.  An example of this would be:  console.log(theFunction(value1,value2))
 */
-
 /*
 Task 1a - Voting Age
-
 Do the following:   
-   1. Create a variable called votingAge and assign it a value
-   2. Console log true if age is 18 or higher
-
+   1. Make a variable called votingAge and give it a value
+   2. Return true if age is 18 or higher
    HINT: no function required
 */
 
 
+var votingAge = 18;
+if(votingAge >= 18){
+  console.log('true' )
+}else {
+  console.log('no')
+}
 
 /*
 Task 1b - Values
-
 Do the following:   
    1. Declare two variables and assign them values
    2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
-   3. Console log the new value of the 1st variable
-
+   3. Return the new value of the 1st variable
    HINT: no function required
 */
+let a = 1;
+let b = 2;
 
-
+if (a < b ) {
+   console.log(a = b)
+} 
 
 
 
 /*
 Task 1c - Convert Strings to Numbers
-
 Do the following:   
    1. Declare a string type variable with the value of "1999"
    2. Convert the string value of "1999" to a integer value of 1999
-   3. Console log the result
-
+   3. Return the result
    HINT: look up the Number method
 */
 
 
+let year = 1999; 
+let number = parseInt(year)
+console.log(number)
 
 
 /*
@@ -54,12 +58,14 @@ Task 1d - Multiply
  
 Do the following:   
    1. Invoke the multiply function below and pass it two numbers
-   2. Receive the parameters: a and b
+   2. Receive the numbers in the parameters: a and b
    3. Multiply a and b and return the answer
 */
 
 function multiply(/*add your code here*/){
     /*add your code here*/
+  function multiply(a , b ){
+    return (a * b);
   }
 
 
@@ -76,12 +82,12 @@ Do the following:
 
 function dogYears(/*add your code here*/){
     /*add your code here*/
+function dogYears(age){
+    return dogYears * 7  
 }
 
 
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
 //Dog feeder - Depending on their weight and age, we need to know how many pounds of food to feed our dog each day!
 /*
 Use the hungryDog function and feeding requirements below to do the following:
@@ -92,13 +98,11 @@ Use the hungryDog function and feeding requirements below to do the following:
   REMEMBER: This program should handle correctly adult AND puppy ages and weights
   
   Feeding Requirements:
-
   Adult Dogs 1 year and older 
      up to 5 lbs - 5% of their body weight
      6 - 10 lbs - 4% of their body weight 
      11 - 15 lbs - 3% of their body weight 
      > 15lbs - 2% of their body weight 
-
   Puppies less than 1 year
      2 - 4 months 10% of their body weight
      4 - 7 months 5% of their body weight 
@@ -109,39 +113,59 @@ Use the hungryDog function and feeding requirements below to do the following:
 
 function hungryDog(/*add your code here*/){
     /*add your code here*/
+function hungryDog(weight, years){
+if (years < 1) {
+  if (years <= .3333) {
+    return weight * .1
+  }else if (years < .6666){
+    return weight * .05
+  } 
+  }
+
+}
   }
 
 
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
 // Rock, Paper, Scissors - Let's play against the computer!
 /*
 Create a global variable that randomly generates the computer's choice
 Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
-
-HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
-
 Use the game function below to do the following:
   1. Receive 2 parameters the user's choice and the computer's choice
-  2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match the strings below exactly.
+  2. Return whether the user won, lost, or tied based on these rules of the game described below
    - win should return "you win!"
    - lose should return "you lose!"
-   - tie should return "it's a tie"
+   -tie should return "it's a tie"
   
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
   
-  HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
+  HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
 function game(user, computer){
     /*add your code here*/
 }
-  
-  
+function game( computer){
+    var computer = math.floor(math.random() * 8 + 1);
+    if(computer <=3){
+      computer = 'rock'
+
+    }
+    else if (computer >= 6) {
+      computer = 'paper';
+
+    }
+    else {
+      computer = 'scissors'
+    }
+};
+
+
+
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
 //Metric Converter 
 //Task 5a - KM to Miles 
 /*
@@ -153,8 +177,10 @@ Using the miles function below do the following:
 
 function miles(/*add your code here*/){
     /*add your code here*/
-  }
+function miles(km){
+  return km * 0.621371
 
+  }
 
 
 //Task 5b - Feet to CM
@@ -167,59 +193,59 @@ Using the feet function below do the following:
 
 function feet(/*add your code here*/){
     /*add your code here*/
+function feet(cm){
+  return cm / 30.48
+
   }
- 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
 // Let's Sing 99 Bottles of Soda on the Wall!
 /*
 Using the annoyingSong function below do the following:
-  1. Receive a starting number and start the count down from the number received 
-  2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
-      "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
+  1. Receive a starting number and start to count down from the number received 
+  2. At each iteration, it should return this string: 
+      "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
 function annoyingSong(/*add your code here*/){
         /*add your code here*/
+function annoyingSong(bottles){
+        for(bottles>0; bottles --){
+          return  bottles of soda on the wall, bottles of soda on the wall,
+        }
   }
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
 //Grade Calculator
 /*
 Using the grade function below do the following: 
   1. Receive a score out of 100 
   2. Return the corresponding letter grade following this grade scale:
-
-   90-100 should return 'you got an A' 
-   80-89 should return 'you got a B'
-   70-79 should return 'you got a C'
-   60-69 should return 'you got a D'
-   below should return 'you got an F'
+   90-100 = A 
+   80-89 = B 
+   70-79 = C 
+   60-69 =  D 
+   below 60 = F
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(/*add your code here*/){
+    /*add your code here*/
   }
   
   
-
+  
+  
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
-
 //Vowel Counter - How many vowels are there?
 /*
 Using the vowelCounter function below do the following:
   1. Receive a string as a parameter
   2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
-
   HINT - you may need to study tomorrow's content on arrays 
   HINT - try looking up the .includes() method
 */
-
-
 function vowelCounter(/*add your code here*/) {
     /*add your code here*/
 }
